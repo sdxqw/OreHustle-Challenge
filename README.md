@@ -17,8 +17,10 @@ By offering enticing rewards and fostering an exhilarating competitive environme
 - Customizable event duration
 - Adjustable reward structure
 
+![image](https://github.com/sdxqw/OreHustle-Challenge/assets/94248011/d4dbc558-6ae5-438c-ac9c-b54e8db90129)
 
 
-![image](https://github.com/sdxqw/OreRush/assets/94248011/38484504-20c3-4707-b58a-c1cb50b2966f)
+![image](https://github.com/sdxqw/OreHustle-Challenge/assets/94248011/1f20b4ce-8b19-488f-b977-8b7b31ed325a)
+
 
 
