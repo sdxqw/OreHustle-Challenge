@@ -1,0 +1,4 @@
+name: OreRush
+version: '${version}'
+main: io.github.sdxqw.orerush.OreRush
+api-version: '1.19'
