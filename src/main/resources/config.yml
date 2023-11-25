@@ -1,0 +1,37 @@
+# Configuration file for OreRush plugin
+
+# List of ore types to be included in the event
+ore_types:
+  - COAL_ORE
+  - IRON_ORE
+  - GOLD_ORE
+  - DIAMOND_ORE
+
+# Scheduler settings
+scheduler:
+  leaderboard_update_interval: 5s  # Interval for updating the leaderboard
+  event_spacing_interval: 1m       # Time between events
+  event_duration: 1m               # Duration of each event
+  max_daily_events: 3              # Maximum number of events per day
+
+# Messages used in the plugin
+messages:
+  event_end: "&c&lOreRush Event Ended! &7Next Event in &e{duration}"
+  event_started: "&a&lOreRush has already Started! &7Ending in &e{duration}"
+  event_start: "&a&lOreRush Event Started! &7Ending in &e{duration}"
+  event_winners:
+    header:
+      - "&7Winners:"
+    body: "&e&l{rank}. &6{winners} &7- &6{score} &7blocks"
+    bottom:
+      - "&7&m------------------------"
+  event_reward: "&a&lYou have received a valuable reward!"
+
+# Leaderboard messages
+leaderboard:
+  header:
+    - "&6&lTop 5 Miners"
+    - "&7&m------------------------"
+  body: "&e&l{rank}. &6{player} &7- &6{score} &7blocks"
+  bottom:
+    - "&7&m------------------------"

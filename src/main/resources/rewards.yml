@@ -1,0 +1,15 @@
+# Configuration for rewards in OreRush plugin
+
+# Individual rewards for specific positions
+rewards:
+  1:                # 1st place reward
+    - "give {player} diamond 1"  # Gives 1 diamond to the player
+  
+  2:                # 2nd place reward
+    - "give {player} iron_ingot 1"  # Gives 1 iron ingot to the player
+  
+  3:                # 3rd place reward
+    - "give {player} gold_ingot 1"  # Gives 1 gold ingot to the player
+  
+  4..50:            # Rewards from 4th to 50th place
+    - "give {player} iron_ingot 1"  # Gives 1 iron ingot to the player
