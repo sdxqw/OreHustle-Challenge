@@ -1,8 +1,8 @@
-package io.github.sdxqw.orerush;
+package io.github.sdxqw.orehustlechallenge;
 
-import io.github.sdxqw.orerush.listener.OreRushListener;
-import io.github.sdxqw.orerush.manager.DataManager;
-import io.github.sdxqw.orerush.manager.EventManager;
+import io.github.sdxqw.orehustlechallenge.listener.OreHustleListener;
+import io.github.sdxqw.orehustlechallenge.manager.DataManager;
+import io.github.sdxqw.orehustlechallenge.manager.EventManager;
 import lombok.Getter;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
@@ -11,10 +11,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 
 @Getter
-public final class OreRush extends JavaPlugin {
+public final class OreHustleChallenge extends JavaPlugin {
 
     @Getter
-    private static OreRush instance;
+    private static OreHustleChallenge instance;
 
     private FileConfiguration conf;
 
@@ -37,7 +37,7 @@ public final class OreRush extends JavaPlugin {
         eventManager.scheduleEvents();
 
         getServer().getPluginManager().registerEvents(eventManager, this);
-        getServer().getPluginManager().registerEvents(new OreRushListener(dataManager, eventManager), this);
+        getServer().getPluginManager().registerEvents(new OreHustleListener(dataManager, eventManager), this);
     }
 
     private void loadCustomConfig() {

@@ -1,6 +1,6 @@
-package io.github.sdxqw.orerush.reward;
+package io.github.sdxqw.orehustlechallenge.reward;
 
-import io.github.sdxqw.orerush.OreRush;
+import io.github.sdxqw.orehustlechallenge.OreHustleChallenge;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -17,7 +17,7 @@ import java.util.Map;
 @Getter
 public class RewardManager {
     private final Map<Integer, Player> playerToReward = new HashMap<>();
-    private final FileConfiguration rewardConfig = OreRush.getInstance().getRewardConfig();
+    private final FileConfiguration rewardConfig = OreHustleChallenge.getInstance().getRewardConfig();
 
     /**
      * Adds the given player to the playerToReward map at the given position.
@@ -39,7 +39,7 @@ public class RewardManager {
      * Gives the reward to the player at the given position.
      */
     public void giveReward() {
-        var rewardsSection = OreRush.getInstance().getRewardConfig().getConfigurationSection("rewards");
+        var rewardsSection = OreHustleChallenge.getInstance().getRewardConfig().getConfigurationSection("rewards");
         if (rewardsSection != null) {
             rewardsSection.getKeys(false).forEach(key -> {
                 List<String> reward = rewardsSection.getStringList(key);
@@ -68,7 +68,7 @@ public class RewardManager {
             reward.forEach(rewardLine -> {
                 String replaced = rewardLine.replace("{player}", player.getName());
                 Bukkit.dispatchCommand(Bukkit.getConsoleSender(), replaced);
-                String message = OreRush.getInstance().getConf().getString("messages.event_reward");
+                String message = OreHustleChallenge.getInstance().getConf().getString("messages.event_reward");
                 assert message != null;
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', message));
             });

@@ -1,4 +1,4 @@
-package io.github.sdxqw.orerush.manager;
+package io.github.sdxqw.orehustlechallenge.manager;
 
 import lombok.Getter;
 

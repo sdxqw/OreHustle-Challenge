@@ -1,4 +1,4 @@
-name: OreRush
+name: OreHustle-Challenge
 version: '${version}'
-main: io.github.sdxqw.orerush.OreRush
-api-version: '1.19'
+main: io.github.sdxqw.orehustlechallenge.OreHustleChallenge
+api-version: '1.20'

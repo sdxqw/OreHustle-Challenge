@@ -1,4 +1,4 @@
-# Configuration file for OreRush plugin
+# Configuration file for OreHustle Challenge plugin
 
 # List of ore types to be included in the event
 ore_types:
@@ -16,9 +16,9 @@ scheduler:
 
 # Messages used in the plugin
 messages:
-  event_end: "&c&lOreRush Event Ended! &7Next Event in &e{duration}"
-  event_started: "&a&lOreRush has already Started! &7Ending in &e{duration}"
-  event_start: "&a&lOreRush Event Started! &7Ending in &e{duration}"
+  event_end: "&c&lOreHustle Challenge Ended! &7Next Event in &e{duration}"
+  event_started: "&a&lOreHustle Challenge has already Started! &7Ending in &e{duration}"
+  event_start: "&a&lOreHustle Challenge Started! &7Ending in &e{duration}"
   event_winners:
     header:
       - "&7Winners:"

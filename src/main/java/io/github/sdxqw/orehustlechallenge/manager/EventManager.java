@@ -1,7 +1,7 @@
-package io.github.sdxqw.orerush.manager;
+package io.github.sdxqw.orehustlechallenge.manager;
 
-import io.github.sdxqw.orerush.OreRush;
-import io.github.sdxqw.orerush.reward.RewardManager;
+import io.github.sdxqw.orehustlechallenge.OreHustleChallenge;
+import io.github.sdxqw.orehustlechallenge.reward.RewardManager;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -26,7 +26,7 @@ public class EventManager implements Listener {
     private final Map<UUID, Integer> playerScore = new HashMap<>();
 
     private final DataManager dataManager;
-    private final FileConfiguration config = OreRush.getInstance().getConf();
+    private final FileConfiguration config = OreHustleChallenge.getInstance().getConf();
     private final RewardManager rewardManager = new RewardManager();
     @Getter
     private boolean isEventRunning = false;
@@ -92,7 +92,7 @@ public class EventManager implements Listener {
             public void run() {
                 stopEvent();
             }
-        }.runTaskLater(OreRush.getInstance(), durationTicks);
+        }.runTaskLater(OreHustleChallenge.getInstance(), durationTicks);
 
         Bukkit.broadcastMessage(ChatColor.translateAlternateColorCodes('&', broadcastMessage));
     }
@@ -164,7 +164,7 @@ public class EventManager implements Listener {
             public void run() {
                 updateLeaderboard();
             }
-        }.runTaskTimer(OreRush.getInstance(), 0L, parseTimeStringToTicks(Objects.requireNonNull(OreRush.getInstance().getConf().getString("scheduler.leaderboard_update_interval"))));
+        }.runTaskTimer(OreHustleChallenge.getInstance(), 0L, parseTimeStringToTicks(Objects.requireNonNull(OreHustleChallenge.getInstance().getConf().getString("scheduler.leaderboard_update_interval"))));
     }
 
     /**
@@ -217,7 +217,7 @@ public class EventManager implements Listener {
         for (int i = 0; i < dailyEvents; i++) {
             int delay = eventSpacingTicks * i;
 
-            Bukkit.getScheduler().scheduleSyncDelayedTask(OreRush.getInstance(), () -> startEvent(duration), delay);
+            Bukkit.getScheduler().scheduleSyncDelayedTask(OreHustleChallenge.getInstance(), () -> startEvent(duration), delay);
         }
 
         startDailyTask();
@@ -230,7 +230,7 @@ public class EventManager implements Listener {
         int secondsInDay = 86400;
         int ticksInDay = secondsInDay * 20;
 
-        Bukkit.getScheduler().runTaskTimerAsynchronously(OreRush.getInstance(), this::scheduleEvents, ticksInDay, ticksInDay);
+        Bukkit.getScheduler().runTaskTimerAsynchronously(OreHustleChallenge.getInstance(), this::scheduleEvents, ticksInDay, ticksInDay);
     }
 
 
