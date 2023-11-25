@@ -15,8 +15,9 @@ By offering enticing rewards and fostering an exhilarating competitive environme
 
 # :bulb: Configurable Sections:
 - Customizable event duration
-![image](https://github.com/sdxqw/OreRush/assets/94248011/0b4c72c6-d415-4a23-804a-2dccb62a66de)
 - Adjustable reward structure
+![image](https://github.com/sdxqw/OreRush/assets/94248011/0b4c72c6-d415-4a23-804a-2dccb62a66de)
+
 ![image](https://github.com/sdxqw/OreRush/assets/94248011/38484504-20c3-4707-b58a-c1cb50b2966f)
 
 
